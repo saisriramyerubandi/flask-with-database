@@ -1,0 +1,50 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homestyle.css') }}">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="{{ url_for('homeresults')}}">Home</a></li>
+                <li><a href="{{ url_for('albums')}}">Albums</a></li>
+                <li><a href="{{ url_for('shop')}}">Shop</a></li>
+                <li><a class = 'homeactive' href="{{ url_for('team')}}">About</a></li>
+
+               
+            </ul>
+        </nav>
+    </header>
+
+    <dev class = 'about'>
+        <h1 style ="padding-top: 15; padding-right: 10; padding-bottom: 15; padding-left: 10">DMQL Project : Spring 2022</h1>
+        <h2 style ="padding-top: 15; padding-right: 10; padding-bottom: 15; padding-left: 10">Project name : Digital Music store</h2>
+        <h2 style ="padding-top: 15; padding-right: 10; padding-bottom: 15; padding-left: 10">Team Name : Quarks </h2> 
+        <h3 style ="padding-top: 15; padding-right: 10; padding-bottom: 15; padding-left: 10">Team Members : Shiva Kumar Reddy, Madhukar Reddy, Sai Sriram</h3> 
+        <h3 style ="padding-top: 15; padding-right: 10; padding-bottom: 15; padding-left: 10">Problem Statement :</h3>
+       
+
+        <text style =  "padding-right: 10; padding-left: 10;">
+            Consumer welfare has long been recognized as a benefit of digitization, particularly in the form 
+            of online retailing. Greater consumer access to information has resulted in significant research 
+            into how the internet influences the types of items that generate most of the income. Digitization 
+            of the music consumption falls under the same bracket. Music enthusiasts may now effortlessly 
+            enjoy and benefit from a greater choice of products at a low cost thanks to the Digital Music 
+            Stores.
+            The goal of this project is to identify and handle some of the key challenges that are faced by 
+            music companies whenever a decision is to be made that involves the history of the music 
+            consumption. With efficient data access queries and the luxury of having enormous amount of 
+            consumer data, this project helps the digital music stores to offer wide range of effective 
+            products based on consumer interests, geography etc. and to make smarter business decisions.
+            Use of Database system over an excel files helps in dealing with larger data sets efficiently. A
+            database server like PostgreSQL performs much better when compared to a software application 
+            like excel. SQL queries when compared to the excel formulas are more powerful and flexible.
+            The use of Data Constraints to various types of information works better in SQL over excel as 
+            these constraints applies dynamically to any new entry. SQL is better in terms of storing and 
+            manipulating the data as SQL stores different kinds of information under meaningful tables 
+            which can be interconnected to obtain desired results as opposed to excel. 
+            </text>
+    </dev>
+   
+</body>

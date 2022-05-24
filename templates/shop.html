@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shop.css') }}">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a  href="{{ url_for('homeresults')}}">Home</a></li>
+                <li><a  href="{{ url_for('albums')}}">Albums</a></li>
+                <li><a class = 'homeactive' href="{{ url_for('shop')}}">Shop</a></li>
+                <li><a href="{{ url_for('team')}}">About</a></li>
+
+               
+            </ul>
+        </nav>
+    </header>
+
+    <dev>
+        <form align="center" id='query-form' method="post">
+            <div class="queryform">
+               
+                <input  type="text" placeholder="First Name" class="form-control" name="firstname">
+                <input  type="text" placeholder="Last Name" class="form-control" name="lastname">
+                <input  type="text" placeholder="Address" class="form-control" name="address">
+                <input  type="text" placeholder="Postalcode" class="form-control" name="postalcode">
+                <input  type="text" placeholder="Phone Number" class="form-control" name="phonenumber">
+                <input  type="text" placeholder="E-mail Address" class="form-control" name="email">
+                <input  type="text" placeholder="Enter Album Name" class="form-control" name="albumname">
+            </div>
+            <button  type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </dev>
+    
+</body>

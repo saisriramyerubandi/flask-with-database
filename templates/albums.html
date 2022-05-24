@@ -1,0 +1,50 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homestyle.css') }}">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="{{ url_for('homeresults')}}">Home</a></li>
+                <li><a class ='homeactive' href="{{ url_for('albums')}}">Albums</a></li>
+                <li><a href="{{ url_for('shop')}}">Shop</a></li>
+                <li><a href="{{ url_for('team')}}">About</a></li>
+
+               
+            </ul>
+        </nav>
+    </header>
+
+    <dev>
+        <form align="center" id='query-form' method="post">
+            <div class="queryform">
+                
+                <input  type="text" placeholder="Enter artist name" class="form-control" name="sql_query">
+            </div>
+            <button  type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </dev>
+    {% if results %}
+    <div align = "center" style="overflow-x:auto;">
+        <table class="table">
+            <thead>
+                <tr>
+                    {% for col in cur.description %}
+                        <th scope='col' colspan='2'>{{ col[0] }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in results %}
+                    <tr>
+                        {% for val in item %}
+                            <td colspan='2'>{{ val }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+</body>

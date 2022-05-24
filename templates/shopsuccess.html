@@ -1,0 +1,39 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shop.css') }}">
+
+</head>
+<style>
+    .myDiv {
+      display: block;
+      background-color: lightblue;
+      text-align: center;
+
+    }
+    </style>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a  href="{{ url_for('homeresults')}}">Home</a></li>
+                <li><a  href="{{ url_for('albums')}}">Albums</a></li>
+                <li><a class = 'homeactive' href="{{ url_for('shop')}}">Shop</a></li>
+                <li><a href="{{ url_for('team')}}">About</a></li>
+
+               
+            </ul>
+        </nav>
+    </header>
+
+    <dev class="myDiv" style="background-color:rgb(195, 230, 113);padding:25px;">
+        {% if results %}
+          <h3>{{results}}</h3>
+
+    </dev>
+    {% endif %}
+
+
+
+    
+    
+</body>
